@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  folksdev-webflux-db:
+    image: postgres:13.1-alpine
+    container_name: folksdev-db-webflux
+    ports:
+      - 5435:5432
+    restart: always
+    environment:
+      - POSTGRES_USER=userfolksdevdb
+      - POSTGRES_PASSWORD=pwdfolksdevdb
+      - POSTGRES_DB=folksdevdb
